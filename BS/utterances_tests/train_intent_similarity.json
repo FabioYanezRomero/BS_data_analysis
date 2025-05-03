@@ -1,0 +1,101 @@
+{
+  "Consultar Movimientos Cuenta": {
+    "Consultar Movimientos Cuenta": 1.0,
+    "Consultar Transferencias Cuenta": 0.7716476917266846,
+    "Consultar SWIFT/BIC": 0.8133817911148071,
+    "Saldo de Cuenta": 0.9144258499145508,
+    "Titulares Cuenta": 0.8994761109352112,
+    "Comisiones Cuenta": 0.9141740202903748,
+    "Justificante Transferencia": 0.7573579549789429,
+    "Contratar Cuenta": 0.8788571357727051,
+    "None Intent": 0.9276201725006104
+  },
+  "Consultar Transferencias Cuenta": {
+    "Consultar Movimientos Cuenta": 0.7716476917266846,
+    "Consultar Transferencias Cuenta": 1.0,
+    "Consultar SWIFT/BIC": 0.7459883093833923,
+    "Saldo de Cuenta": 0.7231205701828003,
+    "Titulares Cuenta": 0.7022086977958679,
+    "Comisiones Cuenta": 0.7813253402709961,
+    "Justificante Transferencia": 0.9405691027641296,
+    "Contratar Cuenta": 0.7016507983207703,
+    "None Intent": 0.7914150953292847
+  },
+  "Consultar SWIFT/BIC": {
+    "Consultar Movimientos Cuenta": 0.8133817911148071,
+    "Consultar Transferencias Cuenta": 0.7459883093833923,
+    "Consultar SWIFT/BIC": 1.0,
+    "Saldo de Cuenta": 0.7965848445892334,
+    "Titulares Cuenta": 0.7992696166038513,
+    "Comisiones Cuenta": 0.7797714471817017,
+    "Justificante Transferencia": 0.740634560585022,
+    "Contratar Cuenta": 0.7708216905593872,
+    "None Intent": 0.8300089836120605
+  },
+  "Saldo de Cuenta": {
+    "Consultar Movimientos Cuenta": 0.9144258499145508,
+    "Consultar Transferencias Cuenta": 0.7231205701828003,
+    "Consultar SWIFT/BIC": 0.7965848445892334,
+    "Saldo de Cuenta": 1.0000001192092896,
+    "Titulares Cuenta": 0.866936206817627,
+    "Comisiones Cuenta": 0.8692711591720581,
+    "Justificante Transferencia": 0.7122135162353516,
+    "Contratar Cuenta": 0.8648290634155273,
+    "None Intent": 0.8954195976257324
+  },
+  "Titulares Cuenta": {
+    "Consultar Movimientos Cuenta": 0.8994761109352112,
+    "Consultar Transferencias Cuenta": 0.7022086977958679,
+    "Consultar SWIFT/BIC": 0.7992696166038513,
+    "Saldo de Cuenta": 0.866936206817627,
+    "Titulares Cuenta": 0.9999998807907104,
+    "Comisiones Cuenta": 0.9016305804252625,
+    "Justificante Transferencia": 0.7235755920410156,
+    "Contratar Cuenta": 0.9085824489593506,
+    "None Intent": 0.905184268951416
+  },
+  "Comisiones Cuenta": {
+    "Consultar Movimientos Cuenta": 0.9141740202903748,
+    "Consultar Transferencias Cuenta": 0.7813253402709961,
+    "Consultar SWIFT/BIC": 0.7797714471817017,
+    "Saldo de Cuenta": 0.8692711591720581,
+    "Titulares Cuenta": 0.9016305804252625,
+    "Comisiones Cuenta": 1.000000238418579,
+    "Justificante Transferencia": 0.7859987020492554,
+    "Contratar Cuenta": 0.9045149087905884,
+    "None Intent": 0.9138650894165039
+  },
+  "Justificante Transferencia": {
+    "Consultar Movimientos Cuenta": 0.7573579549789429,
+    "Consultar Transferencias Cuenta": 0.9405691027641296,
+    "Consultar SWIFT/BIC": 0.740634560585022,
+    "Saldo de Cuenta": 0.7122135162353516,
+    "Titulares Cuenta": 0.7235755920410156,
+    "Comisiones Cuenta": 0.7859987020492554,
+    "Justificante Transferencia": 1.0,
+    "Contratar Cuenta": 0.7122372388839722,
+    "None Intent": 0.7964910268783569
+  },
+  "Contratar Cuenta": {
+    "Consultar Movimientos Cuenta": 0.8788571357727051,
+    "Consultar Transferencias Cuenta": 0.7016507983207703,
+    "Consultar SWIFT/BIC": 0.7708216905593872,
+    "Saldo de Cuenta": 0.8648290634155273,
+    "Titulares Cuenta": 0.9085824489593506,
+    "Comisiones Cuenta": 0.9045149087905884,
+    "Justificante Transferencia": 0.7122372388839722,
+    "Contratar Cuenta": 1.000000238418579,
+    "None Intent": 0.8832567930221558
+  },
+  "None Intent": {
+    "Consultar Movimientos Cuenta": 0.9276201725006104,
+    "Consultar Transferencias Cuenta": 0.7914150953292847,
+    "Consultar SWIFT/BIC": 0.8300089836120605,
+    "Saldo de Cuenta": 0.8954195976257324,
+    "Titulares Cuenta": 0.905184268951416,
+    "Comisiones Cuenta": 0.9138650894165039,
+    "Justificante Transferencia": 0.7964910268783569,
+    "Contratar Cuenta": 0.8832567930221558,
+    "None Intent": 1.0
+  }
+}

@@ -1,0 +1,52 @@
+[
+    {
+        "Intención": "Movimientos Cuenta",
+        "Número de utterances": 158,
+        "Número de tests": 131
+    },
+    {
+        "Intención": "Transferencias Cuenta",
+        "Número de utterances": 105,
+        "Número de tests": 96
+    },
+    {
+        "Intención": "SWIFT/BIC",
+        "Número de utterances": 129,
+        "Número de tests": 125
+    },
+    {
+        "Intención": "Saldo de Cuenta",
+        "Número de utterances": 165,
+        "Número de tests": 121
+    },
+    {
+        "Intención": "Titulares Cuenta",
+        "Número de utterances": 106,
+        "Número de tests": 124
+    },
+    {
+        "Intención": "Comisiones Cuenta",
+        "Número de utterances": 114,
+        "Número de tests": 51
+    },
+    {
+        "Intención": "Justificante Transferencia",
+        "Número de utterances": 97,
+        "Número de tests": 121
+    },
+    {
+        "Intención": "Contratar Cuenta",
+        "Número de utterances": 125,
+        "Número de tests": 139
+    },
+    {
+        "Intención": "None Intent",
+        "Número de utterances": 139,
+        "Número de tests": 92
+    },
+    {
+        "Intención": "TOTAL",
+        "Número de utterances": 1138,
+        "Número de tests": 1000
+    }
+]

@@ -1,0 +1,92 @@
+{
+  "Justificante Transferencia": {
+    "sentence_length_KL_divergence": 1.791415137567357,
+    "sentence_length_JS_divergence": 0.040670073495095674,
+    "sentence_length_EMD": 0.34582942830365526,
+    "word_length_KL_divergence": 0.06043575144357166,
+    "word_length_JS_divergence": 0.014685386543270515,
+    "word_length_EMD": 0.39312169312169326,
+    "type_token_ratio_diff": 0.04894179894179895,
+    "embedding_centroid_cosine_similarity": 0.9791648387908936
+  },
+  "Consultar Transferencias Cuenta": {
+    "sentence_length_KL_divergence": 11.671379412096332,
+    "sentence_length_JS_divergence": 0.30061595091844867,
+    "sentence_length_EMD": 2.8244636963696372,
+    "word_length_KL_divergence": 0.47564465200304284,
+    "word_length_JS_divergence": 0.033807535360214795,
+    "word_length_EMD": 0.6515968808708852,
+    "type_token_ratio_diff": 0.02322104125382815,
+    "embedding_centroid_cosine_similarity": 0.9712313413619995
+  },
+  "Consultar Movimientos Cuenta": {
+    "sentence_length_KL_divergence": 0.6990000635785514,
+    "sentence_length_JS_divergence": 0.1948735341366022,
+    "sentence_length_EMD": 5.080690609150059,
+    "word_length_KL_divergence": 0.45820156329268646,
+    "word_length_JS_divergence": 0.019211900273908684,
+    "word_length_EMD": 0.6347874195682246,
+    "type_token_ratio_diff": 0.0014336400264597926,
+    "embedding_centroid_cosine_similarity": 0.9697449207305908
+  },
+  "Titulares Cuenta": {
+    "sentence_length_KL_divergence": 1.1979337350573396,
+    "sentence_length_JS_divergence": 0.06530239120858308,
+    "sentence_length_EMD": 0.5503651856360317,
+    "word_length_KL_divergence": 0.094671062347804,
+    "word_length_JS_divergence": 0.024090565378509163,
+    "word_length_EMD": 0.4076523382144544,
+    "type_token_ratio_diff": 0.13793103448275862,
+    "embedding_centroid_cosine_similarity": 0.9079299569129944
+  },
+  "Comisiones Cuenta": {
+    "sentence_length_KL_divergence": 2.5361064131085085,
+    "sentence_length_JS_divergence": 0.058161470621505375,
+    "sentence_length_EMD": 0.5376676986584108,
+    "word_length_KL_divergence": 0.4104825989387204,
+    "word_length_JS_divergence": 0.013385735916325216,
+    "word_length_EMD": 0.28364527629233505,
+    "type_token_ratio_diff": 0.10594919786096257,
+    "embedding_centroid_cosine_similarity": 0.9830726385116577
+  },
+  "None Intent": {
+    "sentence_length_KL_divergence": 3.549148031779106,
+    "sentence_length_JS_divergence": 0.13520534506019044,
+    "sentence_length_EMD": 1.214263371911167,
+    "word_length_KL_divergence": 0.1316676691064157,
+    "word_length_JS_divergence": 0.01217339397364591,
+    "word_length_EMD": 0.2380843437809808,
+    "type_token_ratio_diff": 0.0029512697323267334,
+    "embedding_centroid_cosine_similarity": 0.9687243700027466
+  },
+  "Saldo de Cuenta": {
+    "sentence_length_KL_divergence": 5.234090160552354,
+    "sentence_length_JS_divergence": 0.13694285892215732,
+    "sentence_length_EMD": 1.7485863418877774,
+    "word_length_KL_divergence": 0.0633245726717918,
+    "word_length_JS_divergence": 0.013047014378046735,
+    "word_length_EMD": 0.5656294747084152,
+    "type_token_ratio_diff": 0.041342857644400655,
+    "embedding_centroid_cosine_similarity": 0.9702978730201721
+  },
+  "Consultar SWIFT/BIC": {
+    "sentence_length_KL_divergence": 4.278917230979559,
+    "sentence_length_JS_divergence": 0.0948583822778688,
+    "sentence_length_EMD": 1.1228429752066114,
+    "word_length_KL_divergence": 0.024326190079131803,
+    "word_length_JS_divergence": 0.006062712053952113,
+    "word_length_EMD": 0.19224649382759845,
+    "type_token_ratio_diff": 0.06484324013115739,
+    "embedding_centroid_cosine_similarity": 0.9638971090316772
+  },
+  "Contratar Cuenta": {
+    "sentence_length_KL_divergence": 9.10489376870426,
+    "sentence_length_JS_divergence": 0.30350505682086304,
+    "sentence_length_EMD": 3.146014388489209,
+    "word_length_KL_divergence": 0.046483860831553536,
+    "word_length_JS_divergence": 0.011796302593153087,
+    "word_length_EMD": 0.21524616422188486,
+    "type_token_ratio_diff": 0.02012346530555939,
+    "embedding_centroid_cosine_similarity": 0.9218845367431641
+  }
+}

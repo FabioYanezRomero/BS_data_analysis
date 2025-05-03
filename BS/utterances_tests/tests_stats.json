@@ -1,0 +1,272 @@
+{
+  "Consultar Movimientos Cuenta": {
+    "num_examples": 131,
+    "vocab_size": 326,
+    "type_token_ratio": 0.1889855072463768,
+    "avg_sentence_length": 13.16793893129771,
+    "sentence_length_percentiles": {
+      "10": 6.0,
+      "25": 9.0,
+      "50": 13.0,
+      "75": 17.0,
+      "90": 20.0
+    },
+    "sentence_length_kurtosis": -0.5440194450168425,
+    "sentence_length_99_percentile": 25.69999999999999,
+    "avg_word_length": 4.607536231884058,
+    "word_length_percentiles": {
+      "10": 2.0,
+      "25": 2.0,
+      "50": 4.0,
+      "75": 6.0,
+      "90": 8.0
+    },
+    "word_length_kurtosis": -0.11124553947420424,
+    "avg_syllables_per_word": 1.8823188405797102,
+    "embedding_cohesion": 0.7305291891098022,
+    "num_sentence_outliers": 2,
+    "sentence_outlier_ratio": 0.015267175572519083,
+    "num_word_outliers": 16,
+    "word_outlier_ratio": 0.00927536231884058
+  },
+  "Consultar Transferencias Cuenta": {
+    "num_examples": 96,
+    "vocab_size": 119,
+    "type_token_ratio": 0.24285714285714285,
+    "avg_sentence_length": 5.104166666666667,
+    "sentence_length_percentiles": {
+      "10": 4.0,
+      "25": 5.0,
+      "50": 5.0,
+      "75": 6.0,
+      "90": 6.0
+    },
+    "sentence_length_kurtosis": -0.34051270098120545,
+    "sentence_length_99_percentile": 7.0,
+    "avg_word_length": 6.271428571428571,
+    "word_length_percentiles": {
+      "10": 2.0,
+      "25": 3.0,
+      "50": 5.0,
+      "75": 9.0,
+      "90": 14.0
+    },
+    "word_length_kurtosis": -0.8404425557142083,
+    "avg_syllables_per_word": 2.0714285714285716,
+    "embedding_cohesion": 0.7858336567878723,
+    "num_sentence_outliers": 0,
+    "sentence_outlier_ratio": 0.0,
+    "num_word_outliers": 0,
+    "word_outlier_ratio": 0.0
+  },
+  "Consultar SWIFT/BIC": {
+    "num_examples": 125,
+    "vocab_size": 223,
+    "type_token_ratio": 0.2273190621814475,
+    "avg_sentence_length": 7.848,
+    "sentence_length_percentiles": {
+      "10": 6.0,
+      "25": 7.0,
+      "50": 8.0,
+      "75": 9.0,
+      "90": 10.0
+    },
+    "sentence_length_kurtosis": 0.3281998380992266,
+    "sentence_length_99_percentile": 10.0,
+    "avg_word_length": 4.598369011213048,
+    "word_length_percentiles": {
+      "10": 2.0,
+      "25": 2.0,
+      "50": 4.0,
+      "75": 6.0,
+      "90": 8.0
+    },
+    "word_length_kurtosis": 1.2732487360568916,
+    "avg_syllables_per_word": 1.871559633027523,
+    "embedding_cohesion": 0.7362748980522156,
+    "num_sentence_outliers": 1,
+    "sentence_outlier_ratio": 0.008,
+    "num_word_outliers": 9,
+    "word_outlier_ratio": 0.009174311926605505
+  },
+  "Saldo de Cuenta": {
+    "num_examples": 121,
+    "vocab_size": 230,
+    "type_token_ratio": 0.20590868397493287,
+    "avg_sentence_length": 9.231404958677686,
+    "sentence_length_percentiles": {
+      "10": 7.0,
+      "25": 8.0,
+      "50": 9.0,
+      "75": 11.0,
+      "90": 12.0
+    },
+    "sentence_length_kurtosis": 5.268336210601346,
+    "sentence_length_99_percentile": 18.19999999999999,
+    "avg_word_length": 4.841539838854073,
+    "word_length_percentiles": {
+      "10": 2.0,
+      "25": 3.0,
+      "50": 5.0,
+      "75": 6.0,
+      "90": 8.0
+    },
+    "word_length_kurtosis": 0.06700763311549407,
+    "avg_syllables_per_word": 1.973142345568487,
+    "embedding_cohesion": 0.7320501208305359,
+    "num_sentence_outliers": 2,
+    "sentence_outlier_ratio": 0.01652892561983471,
+    "num_word_outliers": 6,
+    "word_outlier_ratio": 0.005371530886302597
+  },
+  "Titulares Cuenta": {
+    "num_examples": 124,
+    "vocab_size": 146,
+    "type_token_ratio": 0.15384615384615385,
+    "avg_sentence_length": 7.653225806451613,
+    "sentence_length_percentiles": {
+      "10": 6.0,
+      "25": 7.0,
+      "50": 7.0,
+      "75": 8.0,
+      "90": 10.0
+    },
+    "sentence_length_kurtosis": 0.5199810777201139,
+    "sentence_length_99_percentile": 12.0,
+    "avg_word_length": 5.0906217070600635,
+    "word_length_percentiles": {
+      "10": 2.0,
+      "25": 3.0,
+      "50": 4.0,
+      "75": 7.0,
+      "90": 9.0
+    },
+    "word_length_kurtosis": -0.1810570041115387,
+    "avg_syllables_per_word": 2.095890410958904,
+    "embedding_cohesion": 0.7978845238685608,
+    "num_sentence_outliers": 0,
+    "sentence_outlier_ratio": 0.0,
+    "num_word_outliers": 7,
+    "word_outlier_ratio": 0.007376185458377239
+  },
+  "Comisiones Cuenta": {
+    "num_examples": 51,
+    "vocab_size": 124,
+    "type_token_ratio": 0.3522727272727273,
+    "avg_sentence_length": 6.901960784313726,
+    "sentence_length_percentiles": {
+      "10": 6.0,
+      "25": 6.0,
+      "50": 7.0,
+      "75": 8.0,
+      "90": 8.0
+    },
+    "sentence_length_kurtosis": -0.6340323999792972,
+    "sentence_length_99_percentile": 9.0,
+    "avg_word_length": 5.380681818181818,
+    "word_length_percentiles": {
+      "10": 2.0,
+      "25": 3.0,
+      "50": 5.0,
+      "75": 8.0,
+      "90": 10.0
+    },
+    "word_length_kurtosis": -0.30662273886565483,
+    "avg_syllables_per_word": 2.1704545454545454,
+    "embedding_cohesion": 0.7251797914505005,
+    "num_sentence_outliers": 0,
+    "sentence_outlier_ratio": 0.0,
+    "num_word_outliers": 0,
+    "word_outlier_ratio": 0.0
+  },
+  "Justificante Transferencia": {
+    "num_examples": 121,
+    "vocab_size": 185,
+    "type_token_ratio": 0.19576719576719576,
+    "avg_sentence_length": 7.809917355371901,
+    "sentence_length_percentiles": {
+      "10": 6.0,
+      "25": 7.0,
+      "50": 8.0,
+      "75": 9.0,
+      "90": 10.0
+    },
+    "sentence_length_kurtosis": 1.4976108928812844,
+    "sentence_length_99_percentile": 11.0,
+    "avg_word_length": 6.185185185185185,
+    "word_length_percentiles": {
+      "10": 2.0,
+      "25": 2.0,
+      "50": 6.0,
+      "75": 9.0,
+      "90": 13.0
+    },
+    "word_length_kurtosis": -1.2768680243567438,
+    "avg_syllables_per_word": 2.4444444444444446,
+    "embedding_cohesion": 0.8233717083930969,
+    "num_sentence_outliers": 1,
+    "sentence_outlier_ratio": 0.008264462809917356,
+    "num_word_outliers": 3,
+    "word_outlier_ratio": 0.0031746031746031746
+  },
+  "Contratar Cuenta": {
+    "num_examples": 139,
+    "vocab_size": 288,
+    "type_token_ratio": 0.21851289833080426,
+    "avg_sentence_length": 9.482014388489208,
+    "sentence_length_percentiles": {
+      "10": 7.0,
+      "25": 8.0,
+      "50": 9.0,
+      "75": 11.0,
+      "90": 12.0
+    },
+    "sentence_length_kurtosis": 0.29306406568932664,
+    "sentence_length_99_percentile": 14.620000000000005,
+    "avg_word_length": 5.253414264036419,
+    "word_length_percentiles": {
+      "10": 2.0,
+      "25": 3.0,
+      "50": 5.0,
+      "75": 7.0,
+      "90": 9.0
+    },
+    "word_length_kurtosis": 0.07635724287814938,
+    "avg_syllables_per_word": 2.200303490136571,
+    "embedding_cohesion": 0.8083133697509766,
+    "num_sentence_outliers": 2,
+    "sentence_outlier_ratio": 0.014388489208633094,
+    "num_word_outliers": 13,
+    "word_outlier_ratio": 0.009863429438543247
+  },
+  "None Intent": {
+    "num_examples": 92,
+    "vocab_size": 285,
+    "type_token_ratio": 0.510752688172043,
+    "avg_sentence_length": 6.065217391304348,
+    "sentence_length_percentiles": {
+      "10": 4.0,
+      "25": 5.0,
+      "50": 6.0,
+      "75": 7.0,
+      "90": 7.900000000000006
+    },
+    "sentence_length_kurtosis": 5.015247731914162,
+    "sentence_length_99_percentile": 9.360000000000014,
+    "avg_word_length": 4.881720430107527,
+    "word_length_percentiles": {
+      "10": 2.0,
+      "25": 2.0,
+      "50": 5.0,
+      "75": 7.0,
+      "90": 9.0
+    },
+    "word_length_kurtosis": -0.15302078462901925,
+    "avg_syllables_per_word": 2.0340501792114694,
+    "embedding_cohesion": 0.6336961388587952,
+    "num_sentence_outliers": 1,
+    "sentence_outlier_ratio": 0.010869565217391304,
+    "num_word_outliers": 4,
+    "word_outlier_ratio": 0.007168458781362007
+  }
+}
