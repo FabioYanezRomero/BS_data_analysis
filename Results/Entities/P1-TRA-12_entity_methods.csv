@@ -1,0 +1,16 @@
+entity,engine,method,count,percentage
+Amount,ML Engine,NER,16,100.0
+Amount,FM Engine,systemEntity,5,100.0
+AmountOperator,ML Engine,NER,24,100.0
+AmountOperator,FM Engine,systemEntity,2,100.0
+BalanceType,ML Engine,NER,61,100.0
+BalanceType,FM Engine,systemEntity,25,65.78947368421053
+BalanceType,FM Engine,Full Match,13,34.21052631578947
+FilterExpense,ML Engine,NER,25,100.0
+FilterIncome,ML Engine,NER,17,100.0
+OtherAccount,FM Engine,Partial Match,2,100.0
+OtherAccount,ML Engine,NER,2,100.0
+TransferType,FM Engine,Partial Match,7,50.0
+TransferType,FM Engine,Full Match,5,35.714285714285715
+TransferType,FM Engine,systemEntity,2,14.285714285714285
+TransferType,ML Engine,NER,6,100.0
