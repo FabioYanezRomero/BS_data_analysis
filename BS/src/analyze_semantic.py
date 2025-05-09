@@ -1,28 +1,13 @@
 """
 Script: analyze_semantic.py
-Purpose: Perform semantic cohesion and similarity analysis for training and test datasets.
+Purpose: Perform semantic cohesion and similarity analysis for training and test datasets
+         using sentence-transformers library.
 """
 import numpy as np
 import pandas as pd
 from pathlib import Path
-from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-
-# Custom text encoder to replace SentenceTransformer
-class TextEncoder:
-    def __init__(self, model_name=None):
-        # We ignore model_name to maintain compatibility
-        self.vectorizer = CountVectorizer(min_df=1, binary=True, 
-                                        ngram_range=(1, 2))
-        self.fitted = False
-        
-    def encode(self, sentences, convert_to_numpy=True):
-        # Fit vectorizer if not already fitted
-        if not self.fitted:
-            self.vectorizer.fit(sentences)
-            self.fitted = True
-        # Transform sentences to vectors
-        return self.vectorizer.transform(sentences).toarray()
+from sentence_transformers import SentenceTransformer
 
 
 def compute_cohesion(dir_path, model):
@@ -65,10 +50,10 @@ def compute_pairwise_similarity(centroids):
     return pd.DataFrame(rows)
 
 
-def analyze_semantic(utterances_dir, test_suites_dir, results_dir):
-    """Run semantic cohesion and similarity analysis."""
-    # Use our custom encoder instead of SentenceTransformer
-    model = TextEncoder('all-MiniLM-L6-v2')  # model name is ignored but kept for compatibility
+def analyze_semantic(utterances_dir, test_suites_dir, results_dir, model_name='all-MiniLM-L6-v2'):
+    """Run semantic cohesion and similarity analysis using SentenceTransformer."""
+    # Initialize the sentence transformer model
+    model = SentenceTransformer(model_name)
     results_dir = Path(results_dir)
     # Intra-set cohesion
     train_stats, train_centroids = compute_cohesion(utterances_dir, model)
@@ -100,7 +85,10 @@ def main():
     test_suites_dir = base / 'test_suites'
     results_dir = base / 'Results' / 'data' / 'semantic'
     results_dir.mkdir(exist_ok=True, parents=True)
-    analyze_semantic(utterances_dir, test_suites_dir, results_dir)
+    
+    # You can specify a different model here if needed
+    model_name = 'all-MiniLM-L6-v2'  # Default model
+    analyze_semantic(utterances_dir, test_suites_dir, results_dir, model_name)
 
 
 if __name__ == '__main__':
