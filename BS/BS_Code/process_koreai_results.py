@@ -163,8 +163,6 @@ def compute_entity_metrics(df: pd.DataFrame) -> pd.DataFrame:
     return metrics_df
 
 
-
-
 def compute_koreai_entity_success(df: pd.DataFrame) -> pd.DataFrame:
     # Utterance-level entity success: require every Entity Result in each utterance to be TRUE
     filtered = df[df['Entity Result'].astype(str).str.upper().isin(['TRUE','FALSE'])]
@@ -202,9 +200,9 @@ def clean_notes_for_filename(notes: str) -> str:
     cleaned = re.sub(r'[^\w\-]+', '_', notes.strip())
     return cleaned[:50]  # Limit length for safety
 
-def save_dataframes(filename_prefix: str, intent_metrics: pd.DataFrame, entity_metrics: pd.DataFrame, raw_df: pd.DataFrame, metadata: Dict[str, str]):
+def save_combined_entity_metrics(filename_prefix: str, entity_metrics: pd.DataFrame, utterance_metrics: pd.DataFrame, metadata: Dict[str, str]):
     """
-    Save the processed DataFrames and metrics to BS_dataframes, using the Notes field if available.
+    Save all entity-related metrics (per-entity, micro/global, utterance-level) to a single CSV.
     """
     # Try both possible keys for Notes
     notes = metadata.get('Notes')
@@ -214,9 +212,23 @@ def save_dataframes(filename_prefix: str, intent_metrics: pd.DataFrame, entity_m
         notes = notes.strip().replace('\n', ' ')
     cleaned_notes = clean_notes_for_filename(notes) if notes else None
     base_name = cleaned_notes if cleaned_notes else filename_prefix
-    intent_metrics.to_csv(BS_DATAFRAMES / f'{base_name}_intent_metrics.csv', index=False)
-    entity_metrics.to_csv(BS_DATAFRAMES / f'{base_name}_entity_metrics.csv', index=False)
-    raw_df.to_csv(BS_DATAFRAMES / f'{base_name}_raw.csv', index=False)
+
+    # Add a column to distinguish metric type
+    entity_metrics_cp = entity_metrics.copy()
+    entity_metrics_cp['metric_type'] = 'per_entity_or_micro'
+    # For utterance-level, add compatible columns
+    utterance_metrics_cp = utterance_metrics.copy()
+    utterance_metrics_cp['entity'] = None
+    utterance_metrics_cp['accuracy'] = utterance_metrics_cp['value']
+    utterance_metrics_cp['support'] = None
+    utterance_metrics_cp['metric_type'] = utterance_metrics_cp['metric']
+    # Select columns to match entity_metrics
+    utterance_metrics_cp = utterance_metrics_cp[['entity', 'accuracy', 'support', 'metric_type']]
+    entity_metrics_cp = entity_metrics_cp[['entity', 'accuracy', 'support', 'metric_type']]
+    # Combine
+    combined = pd.concat([entity_metrics_cp, utterance_metrics_cp], ignore_index=True)
+    combined.to_csv(BS_DATAFRAMES / f'{base_name}_all_entity_metrics.csv', index=False)
+    # Also save metadata for traceability
     pd.DataFrame([metadata]).to_csv(BS_DATAFRAMES / f'{base_name}_metadata.csv', index=False)
 
 
@@ -230,15 +242,14 @@ def main():
         try:
             intent_metrics, entity_metrics, raw_df, metadata = process_file(csv_file)
             filename_prefix = csv_file.stem
-            save_dataframes(filename_prefix, intent_metrics, entity_metrics, raw_df, metadata)
-            # compute and save utterance-level success
+            # Compute utterance-level entity success
             utterance_metrics = compute_koreai_entity_success(raw_df)
-            notes = metadata.get('Notes') or metadata.get('Notes:')
-            if notes:
-                notes = notes.strip().replace('\n',' ')
-            base_name = clean_notes_for_filename(notes) if notes else filename_prefix
-            utterance_metrics.to_csv(BS_DATAFRAMES / f"{base_name}_entity_success_koreai.csv", index=False)
-            logging.info(f"Saved processed dataframes for {csv_file.name}")
+            # Save all entity-related metrics in a single CSV
+            save_combined_entity_metrics(filename_prefix, entity_metrics, utterance_metrics, metadata)
+            # Optionally, still save intent metrics and raw for traceability
+            intent_metrics.to_csv(BS_DATAFRAMES / f'{filename_prefix}_intent_metrics.csv', index=False)
+            raw_df.to_csv(BS_DATAFRAMES / f'{filename_prefix}_raw.csv', index=False)
+            logging.info(f"Saved combined entity metrics for {csv_file.name}")
         except Exception as e:
             logging.error(f"Error processing {csv_file.name}: {e}")
 

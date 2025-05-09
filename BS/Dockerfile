@@ -1,21 +1,23 @@
-FROM python:3.8-slim
+FROM ubuntu:22.04
 
 WORKDIR /app
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
+    python3 python3-pip python3-venv python3-distutils python3-setuptools python3-wheel python3-dev \
     build-essential \
+    curl \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy requirements file
 COPY requirements.txt .
 
-# Install Python dependencies
+# Install Python dependencies inside virtualenv
+RUN python3 -m venv /opt/venv
+ENV VIRTUAL_ENV=/opt/venv
+ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+RUN pip install --upgrade pip setuptools wheel
 RUN pip install --no-cache-dir -r requirements.txt
-
-# Download NLTK data
-COPY BS_Code/download_nltk_data.py .
-RUN python download_nltk_data.py
 
 # Copy source code
 COPY . .

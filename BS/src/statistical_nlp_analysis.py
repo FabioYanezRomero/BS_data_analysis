@@ -27,6 +27,17 @@ import seaborn as sns
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 
+#if we don't have punkt installed download it, if it is already installed display the respective message
+try:
+    import nltk
+    nltk.download('punkt')
+except ImportError:
+    print('nltk punkt (all languages) not found, downloading...')
+    import nltk
+    nltk.download('punkt')
+# Download Spanish punkt model (bundled with 'punkt')
+print('nltk punkt (all languages) downloaded')
+
 class NLPAnalyzer:
     def __init__(self, model_name='all-MiniLM-L6-v2'):
         """
