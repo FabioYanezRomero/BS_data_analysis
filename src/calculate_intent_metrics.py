@@ -171,7 +171,7 @@ def process_all_batch_results():
     """
     Process all batch testing results files and generate intent metrics.
     """
-    # Create intent metrics directory if it doesn't exist
+    # Create output directory if it doesn't exist
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
     
     # Process each results file
@@ -183,7 +183,7 @@ def process_all_batch_results():
         metrics_df = calculate_intent_metrics(results_file)
         
         # Save to CSV
-        output_file = intent_metrics_dir / f'{model_name}_intent_metrics.csv'
+        output_file = RESULTS_DIR / f'{model_name}_intent_metrics.csv'
         metrics_df.to_csv(output_file, index=False)
         print(f"Generated intent metrics for {model_name} at {output_file}")
 

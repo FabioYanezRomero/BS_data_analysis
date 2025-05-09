@@ -1,0 +1,10 @@
+file,vocab_size,type_token_ratio
+contratar_cuenta.csv,189,0.23863636363636365
+intencion_nula.csv,358,0.5085227272727273
+saldo_de_cuenta.csv,235,0.1645658263305322
+consultar_movimientos_cuenta.csv,225,0.18703241895261846
+consultar_swift_bic.csv,170,0.16683022571148184
+consultar_transferencias_cuenta.csv,211,0.266078184110971
+titulares_cuenta.csv,221,0.29388297872340424
+justificante_transferencia.csv,186,0.24635761589403973
+comisiones_cuenta.csv,201,0.24632352941176472
