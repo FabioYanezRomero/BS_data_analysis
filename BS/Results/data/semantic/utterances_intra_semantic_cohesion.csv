@@ -1,0 +1,10 @@
+file,cohesion
+contratar_cuenta.csv,0.4426434074866069
+intencion_nula.csv,0.3143501207049546
+saldo_de_cuenta.csv,0.540891932905254
+consultar_movimientos_cuenta.csv,0.5208327788762142
+consultar_swift_bic.csv,0.5599741385758621
+consultar_transferencias_cuenta.csv,0.38299033551705697
+titulares_cuenta.csv,0.4230358603072893
+justificante_transferencia.csv,0.6514593918321812
+comisiones_cuenta.csv,0.5037884352363504
