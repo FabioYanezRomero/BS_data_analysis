@@ -1,9 +1,7 @@
 /.dockerignore
-/Dockerfile
 /activation_functions.py
 /interactive_perceptron.html
 /local_control_spline.py
 /perceptron_visualization.py
 /plots
-/requirements.txt
 /run_docker.sh
