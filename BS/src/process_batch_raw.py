@@ -10,10 +10,11 @@ def process_raw_file(input_path, output_dir):
     # Read all lines
     with open(input_path, encoding='utf-8') as f:
         lines = f.readlines()
-    # Find header line
+    # Find header line by first cell matching Utterance
     header_line = None
     for i, line in enumerate(lines):
-        if line.strip().startswith("Utterance"):
+        first_cell = line.split(',')[0].strip().strip('"')
+        if first_cell == "Utterance":
             header_line = i
             break
     if header_line is None:
@@ -32,7 +33,8 @@ def process_raw_file(input_path, output_dir):
     results_path = output_dir / (input_path.stem + '_results.csv')
     metadata_path = output_dir / (input_path.stem + '_metadata.csv')
     df.to_csv(results_path, index=False)
-    pd.DataFrame([metadata]).to_csv(metadata_path, index=False)
+    with open(metadata_path, 'w', encoding='utf-8') as f:
+        f.writelines(lines[:header_line])
 
 def main():
     raw_dir = Path(__file__).parent.parent / 'batch_testing_results' / 'raw'

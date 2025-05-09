@@ -14,7 +14,7 @@ COPY requirements.txt .
 
 # Install Python dependencies inside virtualenv
 RUN python3 -m venv /opt/venv
-RUN ln -s /opt/venv/bin/python /opt/venv/bin/python3
+RUN ln -sf /opt/venv/bin/python /opt/venv/bin/python3
 ENV VIRTUAL_ENV=/opt/venv
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 RUN pip install --upgrade pip setuptools wheel
