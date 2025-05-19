@@ -4,4 +4,11 @@
 /local_control_spline.py
 /perceptron_visualization.py
 /plots
+<<<<<<< HEAD
 /run_docker.sh
+=======
+/requirements.txt
+/run_docker.sh
+
+/plots
+>>>>>>> c8832b5 (chore: reorganize project structure and add new visualization modules)
