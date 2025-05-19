@@ -1,9 +1,15 @@
+import os
 import numpy as np
 import plotly.graph_objects as go
 from typing import Dict, List, Tuple, Optional
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.manifold import TSNE
 import plotly.express as px
+from pathlib import Path
+
+# Ensure the plots directory exists
+PLOTS_DIR = Path(__file__).parent.parent.parent / 'plots' / 'semantic_similarity'
+PLOTS_DIR.mkdir(parents=True, exist_ok=True)
 
 class SemanticCohesionVisualizer:
     def __init__(self, dimension_reducer=TSNE(n_components=2, random_state=42)):
@@ -149,6 +155,11 @@ class SemanticCohesionVisualizer:
             )
         )
         
+        # Save the figure
+        output_file = PLOTS_DIR / f"cohesion_3d_{title.lower().replace(' ', '_')}.html"
+        fig.write_html(str(output_file))
+        print(f"Saved 3D cohesion plot to {output_file}")
+        
         return fig
 
     def plot_cohesion_radar(
@@ -190,6 +201,11 @@ class SemanticCohesionVisualizer:
             title=title,
             height=600
         )
+        
+        # Save the figure
+        output_file = PLOTS_DIR / f"cohesion_radar_{title.lower().replace(' ', '_')}.html"
+        fig.write_html(str(output_file))
+        print(f"Saved radar plot to {output_file}")
         
         return fig
 
