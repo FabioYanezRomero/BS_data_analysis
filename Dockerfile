@@ -1,21 +1,22 @@
 FROM python:3.9-slim
 
-WORKDIR /app
+WORKDIR /usrvol
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
+    curl \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy requirements file
-COPY dependencies.txt .
+# Copy requirements file if it exists
+COPY requirements.txt .
 
 # Install Python dependencies
-RUN pip install --no-cache-dir -r dependencies.txt
+RUN if [ -f requirements.txt ]; then pip install --no-cache-dir -r requirements.txt; fi
 
 # Set environment variables
 ENV PYTHONUNBUFFERED=1
-ENV PYTHONPATH=/app
+ENV PYTHONPATH=/usrvol
 
 # Default command
-CMD ["bash"]
+CMD ["/bin/bash"]

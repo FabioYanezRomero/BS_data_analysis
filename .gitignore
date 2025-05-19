@@ -1,14 +1,55 @@
-/.dockerignore
-/activation_functions.py
-/interactive_perceptron.html
-/local_control_spline.py
-/perceptron_visualization.py
-/plots
-<<<<<<< HEAD
-/run_docker.sh
-=======
-/requirements.txt
-/run_docker.sh
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
-/plots
->>>>>>> c8832b5 (chore: reorganize project structure and add new visualization modules)
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Project specific
+/plots/*
+!.gitkeep
+
+# Local development
+.env
+.env.local
+
+# Docker
+.dockerignore
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
